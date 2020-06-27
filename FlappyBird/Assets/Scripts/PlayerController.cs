@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
         downRotation = Quaternion.Euler(0, 0, -90);
         forwardRotation = Quaternion.Euler(0, 0, 35);
         game = GameHandler.Instance;
+        rigidbody.simulated = false;
 
     }
 

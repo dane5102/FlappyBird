@@ -24,9 +24,10 @@ public class GameHandler : MonoBehaviour
     }
 
     int gameScore = 0;
-    bool gameEnded = false;
+    bool gameEnded = true;
 
     public bool GameEnded { get { return gameEnded; } }
+    public int Score { get { return gameScore; } }
 
     void Awake()
     {
@@ -70,7 +71,7 @@ public class GameHandler : MonoBehaviour
     void OnPlayerScored()
     {
         gameScore++;
-        score.text = score.ToString();
+        score.text = gameScore.ToString();
     }
 
     void SetPageState(PageState state)
